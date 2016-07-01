@@ -1,0 +1,10 @@
+{
+  "name": "nw-hello-world",
+  "version": "0.0.0",
+  "main": "index.html",        // ( Obrigatório ) Este arquivo será requisitado pelo runtime na sua inicialização
+  "window": {
+    "toolbar": false,
+    "width": 1024,
+    "height": 768
+  }
+}
