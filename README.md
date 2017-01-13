@@ -1,29 +1,35 @@
-# Módulo NBioBSP Nodejs
+# NBioBSP Module for Nodejs
 
-Módulo para utilização do leitor biométrico Nitgen Hamster III em Nodejs 0.12.5 e 0.10.25, em breve faremos uma atualização para Nodejs 5.5.0. Faça a instalação do driver que está no diretório driver(64 bits, mas existe 32 bits na Internet também).
+Digital fingerprint reader module for Python using Nitgen device.
+Install the driver that is the "driver" directory.
+
+PS: I used the versions 0.12.5 and 0.10.25.
 
 ```console
-git clone https://github.com/izepa/nodejs-nbiobsp-module.git
-cd nodejs-nbiobsp-module
+git clone https://github.com/paulopinda/nodejs-nbiobsp.git
+cd nodejs-nbiobsp
 ./setup.sh
 node test.js
 ```
 
-#### Código para testar o módulo.
+#### Simple code
 
 ```javascript
 var nbiobsp = require('./build/Release/nbiobsp');
-
 var init = nbiobsp.init();
 
 if(init == true){
-	console.log("Posicione a primeira digital: ");
+	console.log("Insert the first fingerprint: ");
 	var fir1 = nbiobsp.capture(4000);
 
-	console.log("Posicione a segunda digital: ");
+	console.log("Insert the second fingerprint: ");
 	var fir2 = nbiobsp.capture(4000);
 }
 
+console.log(nbiobsp.match(fir1, fir2));
 nbiobsp.close()
 ```
 
+#### Any problem? Report me, please.
+### Paulo Roberto
+paulo.pinda@gmail.com
