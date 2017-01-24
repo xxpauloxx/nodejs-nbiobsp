@@ -5,7 +5,7 @@ Install the driver that is the "driver" directory.
 
 PS: I used the versions 0.12.5 and 0.10.25.
 
-```console
+```bash
 git clone https://github.com/paulopinda/nodejs-nbiobsp.git
 cd nodejs-nbiobsp
 ./setup.sh
